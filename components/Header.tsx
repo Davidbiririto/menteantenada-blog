@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logoMente from '../logo-mente-antenada.png'
+import logoMente from '../logo-mente-antenada-header.png'
 
 const nav = [
   ['Tecnologia', '/categoria/tecnologia'],
@@ -12,26 +12,17 @@ const nav = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-cyanx/10 bg-ink/86 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-cyanx/10 bg-ink/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center">
           <Image
             src={logoMente}
             alt="Logo Mente Antenada"
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-2xl object-cover"
+            width={260}
+            height={90}
+            className="h-14 w-auto object-contain"
             priority
           />
-
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-xl font-extrabold tracking-tight text-white">
-              Mente
-            </span>
-            <span className="font-display text-sm font-extrabold uppercase tracking-wide text-cyanx">
-              Antenada
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-5 text-sm text-slate-300 lg:flex">
