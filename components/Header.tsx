@@ -42,12 +42,7 @@ export default function Header() {
             <span className="hidden sm:inline">Inscrever-se</span>
           </Link>
 
-          <Link
-            href="/admin"
-            className="btn-ghost hidden whitespace-nowrap px-4 py-3 text-sm font-bold sm:inline-flex"
-          >
-            Admin
-          </Link>
+          
         </div>
       </div>
     </header>
