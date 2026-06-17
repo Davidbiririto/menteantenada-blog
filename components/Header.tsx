@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import logoMente from '../logo-mente-antenada.png'
 
 const nav = [
   ['Tecnologia', '/categoria/tecnologia'],
@@ -15,7 +16,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo-mente-antenada.png"
+            src={logoMente}
             alt="Logo Mente Antenada"
             width={230}
             height={80}
