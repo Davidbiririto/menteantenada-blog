@@ -14,15 +14,24 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-cyanx/10 bg-ink/86 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src={logoMente}
             alt="Logo Mente Antenada"
-            width={230}
-            height={80}
-            className="h-14 w-auto object-contain"
+            width={48}
+            height={48}
+            className="h-12 w-12 rounded-2xl object-cover"
             priority
           />
+
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl font-extrabold tracking-tight text-white">
+              Mente
+            </span>
+            <span className="font-display text-sm font-extrabold uppercase tracking-wide text-cyanx">
+              Antenada
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-5 text-sm text-slate-300 lg:flex">
