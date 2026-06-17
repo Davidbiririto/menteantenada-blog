@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
           <div className="flex flex-col items-center gap-2 text-white/80">
             <div className="flex h-14 w-8 animate-bounce items-start justify-center rounded-full border-2 border-white/70 p-2">
               <span className="h-3 w-1 rounded-full bg-white/90" />
