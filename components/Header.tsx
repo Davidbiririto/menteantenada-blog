@@ -34,7 +34,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/#newsletter" className="btn-primary px-4 py-2 text-sm">
+          <Link href="/#newsletter" className="btn-primary whitespace-nowrap px-3 py-2 text-sm sm:px-4"
             Inscrever-se
           </Link>
           <Link href="/admin" className="btn-ghost hidden px-4 py-2 text-sm sm:inline-flex">
