@@ -1,4 +1,3 @@
-.
 import Image from 'next/image'
 import Link from 'next/link'
 import logoMente from '../logo-mente-antenada-header.png'
@@ -34,22 +33,22 @@ export default function Header() {
           ))}
         </nav>
 
-<div className="flex shrink-0 items-center gap-2">
-  <Link
-    href="/#newsletter"
-    className="btn-primary whitespace-nowrap px-4 py-3 text-sm font-bold sm:px-5"
-  >
-    <span className="sm:hidden">Newsletter</span>
-    <span className="hidden sm:inline">Inscrever-se</span>
-  </Link>
+        <div className="flex shrink-0 items-center gap-2">
+          <Link
+            href="/#newsletter"
+            className="btn-primary whitespace-nowrap px-4 py-3 text-sm font-bold sm:px-5"
+          >
+            <span className="sm:hidden">Newsletter</span>
+            <span className="hidden sm:inline">Inscrever-se</span>
+          </Link>
 
-  <Link
-    href="/admin"
-    className="btn-ghost hidden whitespace-nowrap px-4 py-3 text-sm font-bold sm:inline-flex"
-  >
-    Admin
-  </Link>
-</div>
+          <Link
+            href="/admin"
+            className="btn-ghost hidden whitespace-nowrap px-4 py-3 text-sm font-bold sm:inline-flex"
+          >
+            Admin
+          </Link>
+        </div>
       </div>
     </header>
   )
