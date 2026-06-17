@@ -1,5 +1,5 @@
 .
--import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import logoMente from '../logo-mente-antenada-header.png'
 
