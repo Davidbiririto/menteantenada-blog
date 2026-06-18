@@ -12,7 +12,7 @@ return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <vi
      poster={heroBg.src}
    > <source src="/videos/hero-bg-loop.mp4" type="video/mp4" /> </video>
 
-```
+
   <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/65 to-ink/20" />
   <div className="absolute inset-0 bg-gradient-to-b from-ink/10 via-transparent to-ink/85" />
 
@@ -72,7 +72,7 @@ return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <vi
     </div>
   </div>
 </section>
-```
+
 
 )
 }
