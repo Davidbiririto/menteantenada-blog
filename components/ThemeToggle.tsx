@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const lightThemeCSS = 
+const lightThemeCSS = `
 html,
 body {
 background: #ffffff !important;
@@ -74,7 +74,6 @@ color: #0369a1 !important;
 border-color: rgba(2, 132, 199, 0.22) !important;
 }
 
-/* Mantém os cards dos artigos escuros */
 [class~="group"] {
 background: #0b1220 !important;
 background-color: #0b1220 !important;
@@ -96,7 +95,6 @@ color: #ffffff !important;
 color: #cbd5e1 !important;
 }
 
-/* Página dos artigos: leitura clara */
 .article-content,
 .prose {
 background: #ffffff !important;
@@ -148,7 +146,6 @@ textarea::placeholder {
 color: #64748b !important;
 }
 
-/* Newsletter continua escura para combinar com os cards */
 .glass {
 background: #0b1220 !important;
 background-color: #0b1220 !important;
@@ -181,12 +178,11 @@ color: #0f172a !important;
 border-color: rgba(15, 23, 42, 0.16) !important;
 }
 
-/* Hero continua escuro por causa do vídeo */
 section:has(video) {
 background: #07111f !important;
 background-color: #07111f !important;
 }
-
+`
 
 export default function ThemeToggle() {
 const [isLight, setIsLight] = useState(false)
@@ -197,7 +193,7 @@ document.body.classList.add('light-theme')
 document.documentElement.setAttribute('data-theme', 'light')
 document.body.setAttribute('data-theme', 'light')
 
-
+```
 let styleTag = document.getElementById('mente-light-theme-style')
 
 if (!styleTag) {
@@ -210,7 +206,7 @@ styleTag.innerHTML = lightThemeCSS
 
 localStorage.setItem('mente-theme', 'light')
 setIsLight(true)
-
+```
 
 }
 
@@ -220,7 +216,7 @@ document.body.classList.remove('light-theme')
 document.documentElement.setAttribute('data-theme', 'dark')
 document.body.setAttribute('data-theme', 'dark')
 
-
+```
 const styleTag = document.getElementById('mente-light-theme-style')
 
 if (styleTag) {
@@ -229,20 +225,20 @@ if (styleTag) {
 
 localStorage.setItem('mente-theme', 'dark')
 setIsLight(false)
-
+```
 
 }
 
 useEffect(() => {
 const savedTheme = localStorage.getItem('mente-theme')
 
-
+```
 if (savedTheme === 'light') {
   enableLightTheme()
 } else {
   enableDarkTheme()
 }
-
+```
 
 }, [])
 
