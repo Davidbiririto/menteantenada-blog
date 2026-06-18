@@ -4,73 +4,71 @@ import PostCard from '@/components/PostCard'
 import { createClient } from '@/lib/supabase/server'
 
 export default async function HomePage() {
-const supabase = createClient()
+  const supabase = createClient()
 
-const { data: posts } = await supabase
-.from('posts')
-.select('*, categories(*)')
-.eq('status', 'published')
-.order('published_at', { ascending: false })
-.limit(6)
+  const { data: posts } = await supabase
+    .from('posts')
+    .select('*, categories(*)')
+    .eq('status', 'published')
+    .order('published_at', { ascending: false })
+    .limit(6)
 
-const { data: categories } = await supabase
-.from('categories')
-.select('*')
-.order('name')
+  const { data: categories } = await supabase
+    .from('categories')
+    .select('*')
+    .order('name')
 
-return (
-<> <Hero />
+  return (
+    <>
+      <Hero />
 
-```
-  <main className="mx-auto max-w-[1500px] px-4 py-16">
-    <section className="mb-16">
-      <h2 className="text-center font-display text-3xl font-extrabold md:text-4xl">
-        Categorias principais
-      </h2>
+      <main className="mx-auto max-w-[1500px] px-4 py-16">
+        <section className="mb-16">
+          <h2 className="text-center font-display text-3xl font-extrabold md:text-4xl">
+            Categorias principais
+          </h2>
 
-      <div className="mt-7 flex flex-wrap justify-center gap-3">
-        {(categories || []).map(cat => (
-          <a
-            key={cat.id}
-            href={`/categoria/${cat.slug}`}
-            className="rounded-full border border-cyanx/20 bg-cyanx/10 px-4 py-2 text-sm font-semibold text-cyanx hover:bg-cyanx/20"
-          >
-            {cat.name}
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <section id="artigos">
-      <h2 className="mb-8 text-center font-display text-3xl font-extrabold md:text-4xl">
-        Artigos recentes
-      </h2>
-
-      {posts?.length ? (
-        <>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-            {posts.map(post => (
-              <PostCard key={post.id} post={post} />
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            {(categories || []).map(cat => (
+              <a
+                key={cat.id}
+                href={`/categoria/${cat.slug}`}
+                className="rounded-full border border-cyanx/20 bg-cyanx/10 px-4 py-2 text-sm font-semibold text-cyanx hover:bg-cyanx/20"
+              >
+                {cat.name}
+              </a>
             ))}
           </div>
+        </section>
 
-          <div className="mt-12 flex justify-center">
-            <a href="/artigos" className="btn-primary">
-              Ver todos os artigos →
-            </a>
-          </div>
-        </>
-      ) : (
-        <p className="text-center text-slate-400">
-          Nenhum artigo publicado ainda.
-        </p>
-      )}
-    </section>
+        <section id="artigos">
+          <h2 className="mb-8 text-center font-display text-3xl font-extrabold md:text-4xl">
+            Artigos recentes
+          </h2>
 
-    <NewsletterForm />
-  </main>
-</>
-```
+          {posts?.length ? (
+            <>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+                {posts.map(post => (
+                  <PostCard key={post.id} post={post} />
+                ))}
+              </div>
 
-)
+              <div className="mt-12 flex justify-center">
+                <a href="/artigos" className="btn-primary">
+                  Ver todos os artigos →
+                </a>
+              </div>
+            </>
+          ) : (
+            <p className="text-center text-slate-400">
+              Nenhum artigo publicado ainda.
+            </p>
+          )}
+        </section>
+
+        <NewsletterForm />
+      </main>
+    </>
+  )
 }
