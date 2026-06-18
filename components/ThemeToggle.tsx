@@ -2,207 +2,122 @@
 
 import { useEffect, useState } from 'react'
 
-const lightThemeCSS = `
-html,
-body {
-background: #ffffff !important;
-color: #0f172a !important;
-}
-
-header {
-background: #ffffff !important;
-background-color: #ffffff !important;
-border-color: rgba(15, 23, 42, 0.10) !important;
-box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
-}
-
-main,
-main > section,
-main section {
-background: #ffffff !important;
-background-color: #ffffff !important;
-background-image: none !important;
-color: #0f172a !important;
-}
-
-footer {
-background: #ffffff !important;
-background-color: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.10) !important;
-}
-
-footer h1,
-footer h2,
-footer h3,
-footer strong {
-color: #0f172a !important;
-}
-
-footer p,
-footer li,
-footer a,
-footer span {
-color: #334155 !important;
-}
-
-main section h1,
-main section h2,
-main section h3 {
-color: #0f172a !important;
-}
-
-main section p,
-main section li {
-color: #334155 !important;
-}
-
-.bg-ink,
-.bg-grid {
-background: #ffffff !important;
-background-color: #ffffff !important;
-background-image: none !important;
-}
-
-.text-cyanx {
-color: #0284c7 !important;
-}
-
-main section a[href*="/categoria"] {
-background: #e0f2fe !important;
-color: #0369a1 !important;
-border-color: rgba(2, 132, 199, 0.22) !important;
-}
-
-[class~="group"] {
-background: #0b1220 !important;
-background-color: #0b1220 !important;
-border-color: rgba(0, 217, 255, 0.12) !important;
-box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18) !important;
-}
-
-[class~="group"] h1,
-[class~="group"] h2,
-[class~="group"] h3,
-[class~="group"] p {
-color: #ffffff !important;
-}
-
-[class~="group"] .text-slate-100,
-[class~="group"] .text-slate-200,
-[class~="group"] .text-slate-300,
-[class~="group"] .text-slate-400 {
-color: #cbd5e1 !important;
-}
-
-.article-content,
-.prose {
-background: #ffffff !important;
-color: #334155 !important;
-}
-
-.article-content h1,
-.article-content h2,
-.article-content h3,
-.article-content strong,
-.prose h1,
-.prose h2,
-.prose h3,
-.prose strong {
-color: #0f172a !important;
-}
-
-.article-content p,
-.article-content li,
-.prose p,
-.prose li {
-color: #334155 !important;
-}
-
-.article-content a,
-.prose a {
-color: #0284c7 !important;
-}
-
-.article-content figcaption {
-color: #64748b !important;
-}
-
-.article-content figure img,
-.article-content img {
-border-color: rgba(15, 23, 42, 0.12) !important;
-box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10) !important;
-}
-
-input,
-textarea {
-background: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.16) !important;
-}
-
-input::placeholder,
-textarea::placeholder {
-color: #64748b !important;
-}
-
-.glass {
-background: #0b1220 !important;
-background-color: #0b1220 !important;
-border-color: rgba(0, 217, 255, 0.16) !important;
-}
-
-.glass h1,
-.glass h2,
-.glass h3,
-.glass p,
-.glass span {
-color: #ffffff !important;
-}
-
-.glass input,
-.glass textarea {
-background: rgba(7, 17, 31, .82) !important;
-color: #ffffff !important;
-border-color: rgba(0, 217, 255, .25) !important;
-}
-
-.btn-primary {
-background: linear-gradient(135deg, #0284c7, #2563eb) !important;
-color: #ffffff !important;
-}
-
-.btn-ghost {
-background: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.16) !important;
-}
-
-section:has(video) {
-background: #07111f !important;
-background-color: #07111f !important;
-}
-`
-
 export default function ThemeToggle() {
 const [isLight, setIsLight] = useState(false)
 
-function enableLightTheme() {
+function applyLightTheme() {
 document.documentElement.classList.add('light-theme')
 document.body.classList.add('light-theme')
 document.documentElement.setAttribute('data-theme', 'light')
 document.body.setAttribute('data-theme', 'light')
 
 
-let styleTag = document.getElementById('mente-light-theme-style')
+document.documentElement.style.backgroundColor = '#ffffff'
+document.body.style.backgroundColor = '#ffffff'
+document.body.style.color = '#0f172a'
 
-if (!styleTag) {
-  styleTag = document.createElement('style')
-  styleTag.id = 'mente-light-theme-style'
-  document.head.appendChild(styleTag)
+const siteShell = document.querySelector('.site-shell') as HTMLElement | null
+if (siteShell) {
+  siteShell.style.backgroundColor = '#ffffff'
+  siteShell.style.color = '#0f172a'
 }
 
-styleTag.innerHTML = lightThemeCSS
+const lightAreas = document.querySelectorAll(
+  'header, main, main section, footer'
+)
+
+lightAreas.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.backgroundColor = '#ffffff'
+  el.style.backgroundImage = 'none'
+  el.style.color = '#0f172a'
+  el.style.borderColor = 'rgba(15, 23, 42, 0.10)'
+})
+
+const generalTitles = document.querySelectorAll(
+  'main h1, main h2, main h3, footer h1, footer h2, footer h3'
+)
+
+generalTitles.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.color = '#0f172a'
+})
+
+const generalTexts = document.querySelectorAll(
+  'main p, main li, footer p, footer li, footer a, footer span'
+)
+
+generalTexts.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.color = '#334155'
+})
+
+const articleContent = document.querySelectorAll(
+  '.article-content, .prose'
+)
+
+articleContent.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.backgroundColor = '#ffffff'
+  el.style.color = '#334155'
+})
+
+const articleText = document.querySelectorAll(
+  '.article-content p, .article-content li, .prose p, .prose li'
+)
+
+articleText.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.color = '#334155'
+})
+
+const articleTitles = document.querySelectorAll(
+  '.article-content h1, .article-content h2, .article-content h3, .article-content strong, .prose h1, .prose h2, .prose h3, .prose strong'
+)
+
+articleTitles.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.color = '#0f172a'
+})
+
+const categoryPills = document.querySelectorAll(
+  'main section a[href*="/categoria"]'
+)
+
+categoryPills.forEach((element) => {
+  const el = element as HTMLElement
+  el.style.backgroundColor = '#e0f2fe'
+  el.style.color = '#0369a1'
+  el.style.borderColor = 'rgba(2, 132, 199, 0.22)'
+})
+
+const cards = document.querySelectorAll('[class~="group"]')
+
+cards.forEach((element) => {
+  const card = element as HTMLElement
+  card.style.backgroundColor = '#0b1220'
+  card.style.borderColor = 'rgba(0, 217, 255, 0.12)'
+  card.style.boxShadow = '0 18px 45px rgba(15, 23, 42, 0.18)'
+
+  const cardTitles = card.querySelectorAll('h1, h2, h3')
+  cardTitles.forEach((title) => {
+    const el = title as HTMLElement
+    el.style.color = '#ffffff'
+  })
+
+  const cardTexts = card.querySelectorAll('p, span, li')
+  cardTexts.forEach((text) => {
+    const el = text as HTMLElement
+    el.style.color = '#cbd5e1'
+  })
+})
+
+const newsletter = document.querySelector('.glass') as HTMLElement | null
+if (newsletter) {
+  newsletter.style.backgroundColor = '#0b1220'
+  newsletter.style.borderColor = 'rgba(0, 217, 255, 0.16)'
+  newsletter.style.boxShadow = '0 18px 60px rgba(0, 217, 255, 0.10)'
+}
 
 localStorage.setItem('mente-theme', 'light')
 setIsLight(true)
@@ -210,18 +125,24 @@ setIsLight(true)
 
 }
 
-function enableDarkTheme() {
+function applyDarkTheme() {
 document.documentElement.classList.remove('light-theme')
 document.body.classList.remove('light-theme')
 document.documentElement.setAttribute('data-theme', 'dark')
 document.body.setAttribute('data-theme', 'dark')
 
 
-const styleTag = document.getElementById('mente-light-theme-style')
+document.documentElement.removeAttribute('style')
+document.body.removeAttribute('style')
 
-if (styleTag) {
-  styleTag.remove()
-}
+const styledElements = document.querySelectorAll(
+  '.site-shell, header, main, main section, footer, main h1, main h2, main h3, main p, main li, footer h1, footer h2, footer h3, footer p, footer li, footer a, footer span, .article-content, .article-content p, .article-content li, .article-content h1, .article-content h2, .article-content h3, .article-content strong, .prose, .prose p, .prose li, .prose h1, .prose h2, .prose h3, .prose strong, main section a[href*="/categoria"], [class~="group"], [class~="group"] h1, [class~="group"] h2, [class~="group"] h3, [class~="group"] p, [class~="group"] span, [class~="group"] li, .glass'
+)
+
+styledElements.forEach((element) => {
+  const el = element as HTMLElement
+  el.removeAttribute('style')
+})
 
 localStorage.setItem('mente-theme', 'dark')
 setIsLight(false)
@@ -234,9 +155,11 @@ const savedTheme = localStorage.getItem('mente-theme')
 
 
 if (savedTheme === 'light') {
-  enableLightTheme()
+  setTimeout(() => {
+    applyLightTheme()
+  }, 50)
 } else {
-  enableDarkTheme()
+  applyDarkTheme()
 }
 
 
@@ -244,9 +167,9 @@ if (savedTheme === 'light') {
 
 function toggleTheme() {
 if (isLight) {
-enableDarkTheme()
+applyDarkTheme()
 } else {
-enableLightTheme()
+applyLightTheme()
 }
 }
 
