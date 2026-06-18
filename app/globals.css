@@ -178,9 +178,9 @@ background-color: #f8fafc !important;
 
 .light-theme .bg-slate-950,
 .light-theme .bg-slate-900,
-.light-theme .bg-slate-900/45,
-.light-theme .bg-slate-900/70,
-.light-theme .bg-white/10 {
+.light-theme [class*="bg-slate-900/45"],
+.light-theme [class*="bg-slate-900/70"],
+.light-theme [class*="bg-white/10"] {
 background-color: #ffffff !important;
 }
 
@@ -195,11 +195,11 @@ color: #0f172a !important;
 color: #334155 !important;
 }
 
-.light-theme .border-cyanx/10,
-.light-theme .border-cyanx/20,
-.light-theme .border-cyanx/30,
-.light-theme .border-cyanx/40,
-.light-theme .border-white/30 {
+.light-theme [class*="border-cyanx/10"],
+.light-theme [class*="border-cyanx/20"],
+.light-theme [class*="border-cyanx/30"],
+.light-theme [class*="border-cyanx/40"],
+.light-theme [class*="border-white/30"] {
 border-color: rgba(15, 23, 42, 0.12) !important;
 }
 
