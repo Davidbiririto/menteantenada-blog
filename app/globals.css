@@ -147,228 +147,18 @@ background: rgba(255, 255, 255, .08);
 
 /* Tema claro - Mente Antenada */
 
-.light-theme {
-color-scheme: light;
-}
-
-/* Fundo geral branco */
+html[data-theme="light"],
+body[data-theme="light"],
 html.light-theme,
-body.light-theme,
-.light-theme body {
-background: #ffffff !important;
-color: #0f172a !important;
-}
-
-/* Header branco no modo claro */
-.light-theme header {
-background: rgba(255, 255, 255, 0.96) !important;
-border-color: rgba(15, 23, 42, 0.10) !important;
-box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
-}
-
-/* Área principal branca */
-.light-theme main {
-background: #ffffff !important;
-color: #0f172a !important;
-}
-
-/* Fundo branco atrás das categorias e dos cards */
-.light-theme main section {
-background: #ffffff !important;
-color: #0f172a !important;
-}
-
-/* Mantém o Hero escuro por causa do vídeo e do contraste */
-.light-theme section:has(video) {
-background: #07111f !important;
-}
-
-/* Remove fundos escuros das áreas gerais, mas sem clarear os cards */
-.light-theme .bg-ink,
-.light-theme .bg-grid {
-background: #ffffff !important;
-background-image: none !important;
-}
-
-/* Títulos gerais no modo claro */
-.light-theme main > section h1,
-.light-theme main > section h2,
-.light-theme main > section h3 {
-color: #0f172a !important;
-}
-
-/* Textos gerais no modo claro */
-.light-theme main > section p,
-.light-theme main > section li {
-color: #334155 !important;
-}
-
-/* Mantém a identidade azul/ciano */
-.light-theme .text-cyanx {
-color: #0284c7 !important;
-}
-
-/* Categorias principais em modo claro */
-.light-theme main section a[href*="/categoria"] {
-background: #e0f2fe !important;
-color: #0369a1 !important;
-border-color: rgba(2, 132, 199, 0.22) !important;
-}
-
-/* Preserva os cards dos artigos no visual escuro original */
-.light-theme [class~="group"] {
-background-color: #0b1220 !important;
-border-color: rgba(0, 217, 255, 0.12) !important;
-box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18) !important;
-}
-
-/* Mantém textos internos dos cards claros */
-.light-theme [class~="group"] h1,
-.light-theme [class~="group"] h2,
-.light-theme [class~="group"] h3,
-.light-theme [class~="group"] .text-white {
-color: #ffffff !important;
-}
-
-.light-theme [class~="group"] p,
-.light-theme [class~="group"] .text-slate-100,
-.light-theme [class~="group"] .text-slate-200,
-.light-theme [class~="group"] .text-slate-300,
-.light-theme [class~="group"] .text-slate-400 {
-color: #cbd5e1 !important;
-}
-
-/* Página de artigo: fundo branco e texto escuro para leitura */
-.light-theme .article-content,
-.light-theme .prose {
-background: #ffffff !important;
-color: #334155 !important;
-}
-
-.light-theme .article-content h1,
-.light-theme .article-content h2,
-.light-theme .article-content h3,
-.light-theme .article-content strong,
-.light-theme .prose h1,
-.light-theme .prose h2,
-.light-theme .prose h3,
-.light-theme .prose strong {
-color: #0f172a !important;
-}
-
-.light-theme .article-content p,
-.light-theme .article-content li,
-.light-theme .prose p,
-.light-theme .prose li {
-color: #334155 !important;
-}
-
-.light-theme .article-content a,
-.light-theme .prose a {
-color: #0284c7 !important;
-}
-
-.light-theme .article-content figcaption {
-color: #64748b !important;
-}
-
-.light-theme .article-content figure img,
-.light-theme .article-content img {
-border-color: rgba(15, 23, 42, 0.12) !important;
-box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10) !important;
-}
-
-/* Inputs no modo claro */
-.light-theme input,
-.light-theme textarea {
-background: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.16) !important;
-}
-
-.light-theme input::placeholder,
-.light-theme textarea::placeholder {
-color: #64748b !important;
-}
-
-/* Mantém campos escuros quando estiverem dentro de blocos escuros, como newsletter */
-.light-theme .glass input,
-.light-theme .glass textarea,
-.light-theme .glass .input-dark {
-background: rgba(7, 17, 31, .82) !important;
-color: #ffffff !important;
-border-color: rgba(0, 217, 255, .25) !important;
-}
-
-/* Botão principal mantém azul */
-.light-theme .btn-primary {
-background: linear-gradient(135deg, #0284c7, #2563eb) !important;
-color: #ffffff !important;
-}
-
-/* Botão secundário claro */
-.light-theme .btn-ghost {
-background: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.16) !important;
-}
-
-.light-theme .btn-ghost:hover {
-background: #f1f5f9 !important;
-}
-
-/* Rodapé branco */
-.light-theme footer {
-background: #ffffff !important;
-color: #0f172a !important;
-border-color: rgba(15, 23, 42, 0.10) !important;
-}
-
-.light-theme footer h1,
-.light-theme footer h2,
-.light-theme footer h3,
-.light-theme footer strong {
-color: #0f172a !important;
-}
-
-.light-theme footer p,
-.light-theme footer li,
-.light-theme footer a,
-.light-theme footer span {
-color: #334155 !important;
-}
-
-.light-theme footer .text-cyanx {
-color: #0284c7 !important;
-}
-
-/* Evita problema visual em imagens */
-.light-theme img {
-color: transparent;
-}
-/* Correção final do modo claro: fundo branco sem alterar cards */
-
-html.light-theme,
-html.light-theme body,
 body.light-theme {
 background: #ffffff !important;
 color: #0f172a !important;
+color-scheme: light;
 }
 
-/* Força os containers principais do site a ficarem brancos no modo claro */
-html.light-theme body > div,
-body.light-theme > div,
-html.light-theme main,
-body.light-theme main,
-html.light-theme main > section,
-body.light-theme main > section {
-background: #ffffff !important;
-background-color: #ffffff !important;
-background-image: none !important;
-color: #0f172a !important;
-}
-
-/* Header branco no modo claro */
+/* Header branco */
+html[data-theme="light"] header,
+body[data-theme="light"] header,
 html.light-theme header,
 body.light-theme header {
 background: #ffffff !important;
@@ -377,42 +167,92 @@ border-color: rgba(15, 23, 42, 0.10) !important;
 box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
 }
 
-/* Rodapé branco no modo claro */
-html.light-theme footer,
-body.light-theme footer {
+/* Fundo branco geral abaixo do Hero */
+html[data-theme="light"] main,
+body[data-theme="light"] main,
+html[data-theme="light"] main section,
+body[data-theme="light"] main section,
+html.light-theme main,
+body.light-theme main,
+html.light-theme main section,
+body.light-theme main section {
 background: #ffffff !important;
 background-color: #ffffff !important;
-border-color: rgba(15, 23, 42, 0.10) !important;
+background-image: none !important;
 color: #0f172a !important;
 }
 
-/* Textos gerais em cima do fundo branco */
-html.light-theme main h1,
-html.light-theme main h2,
-html.light-theme main h3,
-body.light-theme main h1,
-body.light-theme main h2,
-body.light-theme main h3 {
-color: #0f172a !important;
+/* Remove fundo escuro das áreas gerais */
+html[data-theme="light"] .bg-ink,
+html[data-theme="light"] .bg-grid,
+body[data-theme="light"] .bg-ink,
+body[data-theme="light"] .bg-grid,
+html.light-theme .bg-ink,
+html.light-theme .bg-grid,
+body.light-theme .bg-ink,
+body.light-theme .bg-grid {
+background: #ffffff !important;
+background-color: #ffffff !important;
+background-image: none !important;
 }
 
-html.light-theme main p,
-html.light-theme main li,
-body.light-theme main p,
-body.light-theme main li {
-color: #334155 !important;
-}
-
-/* Mantém o Hero escuro por causa do vídeo */
+/* Hero continua escuro por causa do vídeo */
+html[data-theme="light"] section:has(video),
+body[data-theme="light"] section:has(video),
 html.light-theme section:has(video),
 body.light-theme section:has(video) {
 background: #07111f !important;
 background-color: #07111f !important;
 }
 
-/* Mantém os cards dos artigos no estilo escuro original */
-html.light-theme article,
-body.light-theme article,
+/* Títulos e textos fora dos cards */
+html[data-theme="light"] main section h1,
+html[data-theme="light"] main section h2,
+html[data-theme="light"] main section h3,
+body[data-theme="light"] main section h1,
+body[data-theme="light"] main section h2,
+body[data-theme="light"] main section h3,
+html.light-theme main section h1,
+html.light-theme main section h2,
+html.light-theme main section h3,
+body.light-theme main section h1,
+body.light-theme main section h2,
+body.light-theme main section h3 {
+color: #0f172a !important;
+}
+
+html[data-theme="light"] main section p,
+html[data-theme="light"] main section li,
+body[data-theme="light"] main section p,
+body[data-theme="light"] main section li,
+html.light-theme main section p,
+html.light-theme main section li,
+body.light-theme main section p,
+body.light-theme main section li {
+color: #334155 !important;
+}
+
+/* Identidade azul */
+html[data-theme="light"] .text-cyanx,
+body[data-theme="light"] .text-cyanx,
+html.light-theme .text-cyanx,
+body.light-theme .text-cyanx {
+color: #0284c7 !important;
+}
+
+/* Categorias */
+html[data-theme="light"] main section a[href*="/categoria"],
+body[data-theme="light"] main section a[href*="/categoria"],
+html.light-theme main section a[href*="/categoria"],
+body.light-theme main section a[href*="/categoria"] {
+background: #e0f2fe !important;
+color: #0369a1 !important;
+border-color: rgba(2, 132, 199, 0.22) !important;
+}
+
+/* Cards permanecem escuros */
+html[data-theme="light"] [class~="group"],
+body[data-theme="light"] [class~="group"],
 html.light-theme [class~="group"],
 body.light-theme [class~="group"] {
 background: #0b1220 !important;
@@ -421,7 +261,15 @@ border-color: rgba(0, 217, 255, 0.12) !important;
 box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18) !important;
 }
 
-/* Textos dos cards continuam claros */
+/* Textos dos cards permanecem claros */
+html[data-theme="light"] [class~="group"] h1,
+html[data-theme="light"] [class~="group"] h2,
+html[data-theme="light"] [class~="group"] h3,
+html[data-theme="light"] [class~="group"] p,
+body[data-theme="light"] [class~="group"] h1,
+body[data-theme="light"] [class~="group"] h2,
+body[data-theme="light"] [class~="group"] h3,
+body[data-theme="light"] [class~="group"] p,
 html.light-theme [class~="group"] h1,
 html.light-theme [class~="group"] h2,
 html.light-theme [class~="group"] h3,
@@ -433,26 +281,27 @@ body.light-theme [class~="group"] p {
 color: #ffffff !important;
 }
 
-html.light-theme [class~="group"] .text-slate-100,
-html.light-theme [class~="group"] .text-slate-200,
-html.light-theme [class~="group"] .text-slate-300,
-html.light-theme [class~="group"] .text-slate-400,
-body.light-theme [class~="group"] .text-slate-100,
-body.light-theme [class~="group"] .text-slate-200,
-body.light-theme [class~="group"] .text-slate-300,
-body.light-theme [class~="group"] .text-slate-400 {
-color: #cbd5e1 !important;
-}
-
-/* Página interna do artigo: fundo branco e leitura escura */
+/* Página de artigo clara */
+html[data-theme="light"] .article-content,
+body[data-theme="light"] .article-content,
 html.light-theme .article-content,
 body.light-theme .article-content,
+html[data-theme="light"] .prose,
+body[data-theme="light"] .prose,
 html.light-theme .prose,
 body.light-theme .prose {
 background: #ffffff !important;
 color: #334155 !important;
 }
 
+html[data-theme="light"] .article-content h1,
+html[data-theme="light"] .article-content h2,
+html[data-theme="light"] .article-content h3,
+html[data-theme="light"] .article-content strong,
+body[data-theme="light"] .article-content h1,
+body[data-theme="light"] .article-content h2,
+body[data-theme="light"] .article-content h3,
+body[data-theme="light"] .article-content strong,
 html.light-theme .article-content h1,
 html.light-theme .article-content h2,
 html.light-theme .article-content h3,
@@ -464,6 +313,10 @@ body.light-theme .article-content strong {
 color: #0f172a !important;
 }
 
+html[data-theme="light"] .article-content p,
+html[data-theme="light"] .article-content li,
+body[data-theme="light"] .article-content p,
+body[data-theme="light"] .article-content li,
 html.light-theme .article-content p,
 html.light-theme .article-content li,
 body.light-theme .article-content p,
@@ -471,7 +324,65 @@ body.light-theme .article-content li {
 color: #334155 !important;
 }
 
-/* Newsletter pode continuar escura para manter destaque */
+html[data-theme="light"] .article-content a,
+body[data-theme="light"] .article-content a,
+html.light-theme .article-content a,
+body.light-theme .article-content a {
+color: #0284c7 !important;
+}
+
+/* Rodapé branco */
+html[data-theme="light"] footer,
+body[data-theme="light"] footer,
+html.light-theme footer,
+body.light-theme footer {
+background: #ffffff !important;
+background-color: #ffffff !important;
+color: #0f172a !important;
+border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+html[data-theme="light"] footer h1,
+html[data-theme="light"] footer h2,
+html[data-theme="light"] footer h3,
+html[data-theme="light"] footer strong,
+body[data-theme="light"] footer h1,
+body[data-theme="light"] footer h2,
+body[data-theme="light"] footer h3,
+body[data-theme="light"] footer strong,
+html.light-theme footer h1,
+html.light-theme footer h2,
+html.light-theme footer h3,
+html.light-theme footer strong,
+body.light-theme footer h1,
+body.light-theme footer h2,
+body.light-theme footer h3,
+body.light-theme footer strong {
+color: #0f172a !important;
+}
+
+html[data-theme="light"] footer p,
+html[data-theme="light"] footer li,
+html[data-theme="light"] footer a,
+html[data-theme="light"] footer span,
+body[data-theme="light"] footer p,
+body[data-theme="light"] footer li,
+body[data-theme="light"] footer a,
+body[data-theme="light"] footer span,
+html.light-theme footer p,
+html.light-theme footer li,
+html.light-theme footer a,
+html.light-theme footer span,
+body.light-theme footer p,
+body.light-theme footer li,
+body.light-theme footer a,
+body.light-theme footer span {
+color: #334155 !important;
+}
+
+/* Newsletter mantém destaque escuro */
+html[data-theme="light"] .glass,
+body[data-theme="light"] .glass,
 html.light-theme .glass,
 body.light-theme .glass {
 background: #0b1220 !important;
@@ -479,3 +390,52 @@ background-color: #0b1220 !important;
 border-color: rgba(0, 217, 255, 0.16) !important;
 }
 
+/* Campos */
+html[data-theme="light"] input,
+html[data-theme="light"] textarea,
+body[data-theme="light"] input,
+body[data-theme="light"] textarea,
+html.light-theme input,
+html.light-theme textarea,
+body.light-theme input,
+body.light-theme textarea {
+background: #ffffff !important;
+color: #0f172a !important;
+border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+html[data-theme="light"] .glass input,
+html[data-theme="light"] .glass textarea,
+body[data-theme="light"] .glass input,
+body[data-theme="light"] .glass textarea,
+html.light-theme .glass input,
+html.light-theme .glass textarea,
+body.light-theme .glass input,
+body.light-theme .glass textarea {
+background: rgba(7, 17, 31, .82) !important;
+color: #ffffff !important;
+border-color: rgba(0, 217, 255, .25) !important;
+}
+
+/* Botões */
+html[data-theme="light"] .btn-primary,
+body[data-theme="light"] .btn-primary,
+html.light-theme .btn-primary,
+body.light-theme .btn-primary {
+background: linear-gradient(135deg, #0284c7, #2563eb) !important;
+color: #ffffff !important;
+}
+
+html[data-theme="light"] .btn-ghost,
+body[data-theme="light"] .btn-ghost,
+html.light-theme .btn-ghost,
+body.light-theme .btn-ghost {
+background: #ffffff !important;
+color: #0f172a !important;
+border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+.light-theme img,
+html[data-theme="light"] img {
+color: transparent;
+}
