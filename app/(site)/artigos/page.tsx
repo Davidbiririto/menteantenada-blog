@@ -29,16 +29,24 @@ export default async function ArtigosPage() {
       </section>
 
       {posts?.length ? (
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          {posts.map(post => (
-            <PostCard key={post.id} post={post} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-center text-slate-400">
-          Nenhum artigo publicado ainda.
-        </p>
-      )}
+  <>
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+      {posts.map(post => (
+        <PostCard key={post.id} post={post} />
+      ))}
+    </div>
+
+    <div className="mt-12 flex justify-center">
+      <a href="/artigos" className="btn-primary">
+        Ver todos os artigos →
+      </a>
+    </div>
+  </>
+) : (
+  <p className="text-center text-slate-400">
+    Nenhum artigo publicado ainda.
+  </p>
+)}
     </main>
   )
 }
