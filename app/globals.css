@@ -346,3 +346,136 @@ color: #0284c7 !important;
 .light-theme img {
 color: transparent;
 }
+/* Correção final do modo claro: fundo branco sem alterar cards */
+
+html.light-theme,
+html.light-theme body,
+body.light-theme {
+background: #ffffff !important;
+color: #0f172a !important;
+}
+
+/* Força os containers principais do site a ficarem brancos no modo claro */
+html.light-theme body > div,
+body.light-theme > div,
+html.light-theme main,
+body.light-theme main,
+html.light-theme main > section,
+body.light-theme main > section {
+background: #ffffff !important;
+background-color: #ffffff !important;
+background-image: none !important;
+color: #0f172a !important;
+}
+
+/* Header branco no modo claro */
+html.light-theme header,
+body.light-theme header {
+background: #ffffff !important;
+background-color: #ffffff !important;
+border-color: rgba(15, 23, 42, 0.10) !important;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Rodapé branco no modo claro */
+html.light-theme footer,
+body.light-theme footer {
+background: #ffffff !important;
+background-color: #ffffff !important;
+border-color: rgba(15, 23, 42, 0.10) !important;
+color: #0f172a !important;
+}
+
+/* Textos gerais em cima do fundo branco */
+html.light-theme main h1,
+html.light-theme main h2,
+html.light-theme main h3,
+body.light-theme main h1,
+body.light-theme main h2,
+body.light-theme main h3 {
+color: #0f172a !important;
+}
+
+html.light-theme main p,
+html.light-theme main li,
+body.light-theme main p,
+body.light-theme main li {
+color: #334155 !important;
+}
+
+/* Mantém o Hero escuro por causa do vídeo */
+html.light-theme section:has(video),
+body.light-theme section:has(video) {
+background: #07111f !important;
+background-color: #07111f !important;
+}
+
+/* Mantém os cards dos artigos no estilo escuro original */
+html.light-theme article,
+body.light-theme article,
+html.light-theme [class~="group"],
+body.light-theme [class~="group"] {
+background: #0b1220 !important;
+background-color: #0b1220 !important;
+border-color: rgba(0, 217, 255, 0.12) !important;
+box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18) !important;
+}
+
+/* Textos dos cards continuam claros */
+html.light-theme [class~="group"] h1,
+html.light-theme [class~="group"] h2,
+html.light-theme [class~="group"] h3,
+html.light-theme [class~="group"] p,
+body.light-theme [class~="group"] h1,
+body.light-theme [class~="group"] h2,
+body.light-theme [class~="group"] h3,
+body.light-theme [class~="group"] p {
+color: #ffffff !important;
+}
+
+html.light-theme [class~="group"] .text-slate-100,
+html.light-theme [class~="group"] .text-slate-200,
+html.light-theme [class~="group"] .text-slate-300,
+html.light-theme [class~="group"] .text-slate-400,
+body.light-theme [class~="group"] .text-slate-100,
+body.light-theme [class~="group"] .text-slate-200,
+body.light-theme [class~="group"] .text-slate-300,
+body.light-theme [class~="group"] .text-slate-400 {
+color: #cbd5e1 !important;
+}
+
+/* Página interna do artigo: fundo branco e leitura escura */
+html.light-theme .article-content,
+body.light-theme .article-content,
+html.light-theme .prose,
+body.light-theme .prose {
+background: #ffffff !important;
+color: #334155 !important;
+}
+
+html.light-theme .article-content h1,
+html.light-theme .article-content h2,
+html.light-theme .article-content h3,
+html.light-theme .article-content strong,
+body.light-theme .article-content h1,
+body.light-theme .article-content h2,
+body.light-theme .article-content h3,
+body.light-theme .article-content strong {
+color: #0f172a !important;
+}
+
+html.light-theme .article-content p,
+html.light-theme .article-content li,
+body.light-theme .article-content p,
+body.light-theme .article-content li {
+color: #334155 !important;
+}
+
+/* Newsletter pode continuar escura para manter destaque */
+html.light-theme .glass,
+body.light-theme .glass {
+background: #0b1220 !important;
+background-color: #0b1220 !important;
+border-color: rgba(0, 217, 255, 0.16) !important;
+}
+
