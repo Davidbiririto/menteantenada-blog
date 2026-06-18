@@ -2,8 +2,8 @@ import Link from 'next/link'
 import heroBg from '../hero-bg.png'
 
 export default function Hero() {
-return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <video
-     className="absolute inset-0 h-full w-full object-cover"
+return ( <section className="relative min-h-[720px] overflow-hidden bg-ink md:min-h-[760px]"> <video
+     className="absolute inset-0 h-full w-full object-cover object-center"
      autoPlay
      muted
      loop
@@ -16,7 +16,7 @@ return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <vi
   <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/65 to-ink/20" />
   <div className="absolute inset-0 bg-gradient-to-b from-ink/10 via-transparent to-ink/85" />
 
-  <div className="relative z-10 mx-auto flex min-h-[760px] max-w-7xl flex-col items-center justify-center px-4 py-24 text-center">
+  <div className="relative z-10 mx-auto flex min-h-[720px] max-w-7xl flex-col items-center justify-center px-4 py-24 text-center md:min-h-[760px]">
     <p className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-cyanx/40 bg-slate-900/45 px-4 py-2 text-sm font-semibold text-cyanx backdrop-blur-md">
       <span className="h-2 w-2 rounded-full bg-cyanx" />
       Blog de tecnologia, IA e inovação
@@ -40,7 +40,10 @@ return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <vi
         Explorar Conteúdo →
       </Link>
 
-      <Link href="/sobre" className="btn-ghost border-white/30 bg-white/10 text-white hover:bg-white/20">
+      <Link
+        href="/sobre"
+        className="btn-ghost border-white/30 bg-white/10 text-white hover:bg-white/20"
+      >
         Saber Mais
       </Link>
     </div>
@@ -48,17 +51,23 @@ return ( <section className="relative min-h-[760px] overflow-hidden bg-ink"> <vi
     <div className="mx-auto mt-14 grid max-w-4xl gap-8 text-white md:grid-cols-3">
       <div>
         <div className="text-3xl font-extrabold text-cyanx">5</div>
-        <div className="text-sm font-semibold text-slate-100">Categorias principais</div>
+        <div className="text-sm font-semibold text-slate-100">
+          Categorias principais
+        </div>
       </div>
 
       <div>
         <div className="text-3xl font-extrabold text-cyanx">Novidades</div>
-        <div className="text-sm font-semibold text-slate-100">Toda semana</div>
+        <div className="text-sm font-semibold text-slate-100">
+          Toda semana
+        </div>
       </div>
 
       <div>
         <div className="text-3xl font-extrabold text-cyanx">Guias</div>
-        <div className="text-sm font-semibold text-slate-100">e ferramentas</div>
+        <div className="text-sm font-semibold text-slate-100">
+          e ferramentas
+        </div>
       </div>
     </div>
 
