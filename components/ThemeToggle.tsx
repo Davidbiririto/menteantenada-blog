@@ -5,40 +5,39 @@ import { useEffect, useState } from 'react'
 export default function ThemeToggle() {
 const [isLight, setIsLight] = useState(false)
 
+function applyTheme(theme: 'light' | 'dark') {
+if (theme === 'light') {
+document.documentElement.classList.add('light-theme')
+document.body.classList.add('light-theme')
+document.documentElement.setAttribute('data-theme', 'light')
+document.body.setAttribute('data-theme', 'light')
+localStorage.setItem('mente-theme', 'light')
+setIsLight(true)
+} else {
+document.documentElement.classList.remove('light-theme')
+document.body.classList.remove('light-theme')
+document.documentElement.setAttribute('data-theme', 'dark')
+document.body.setAttribute('data-theme', 'dark')
+localStorage.setItem('mente-theme', 'dark')
+setIsLight(false)
+}
+}
+
 useEffect(() => {
 const savedTheme = localStorage.getItem('mente-theme')
 
 
 if (savedTheme === 'light') {
-  document.documentElement.classList.add('light-theme')
-  document.body.classList.add('light-theme')
-  setIsLight(true)
+  applyTheme('light')
 } else {
-  document.documentElement.classList.remove('light-theme')
-  document.body.classList.remove('light-theme')
-  setIsLight(false)
+  applyTheme('dark')
 }
 
 
 }, [])
 
 function toggleTheme() {
-const nextIsLight = !isLight
-
-
-setIsLight(nextIsLight)
-
-if (nextIsLight) {
-  document.documentElement.classList.add('light-theme')
-  document.body.classList.add('light-theme')
-  localStorage.setItem('mente-theme', 'light')
-} else {
-  document.documentElement.classList.remove('light-theme')
-  document.body.classList.remove('light-theme')
-  localStorage.setItem('mente-theme', 'dark')
-}
-
-
+applyTheme(isLight ? 'dark' : 'light')
 }
 
 return (
