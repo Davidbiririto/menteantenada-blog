@@ -193,7 +193,7 @@ document.body.classList.add('light-theme')
 document.documentElement.setAttribute('data-theme', 'light')
 document.body.setAttribute('data-theme', 'light')
 
-```
+
 let styleTag = document.getElementById('mente-light-theme-style')
 
 if (!styleTag) {
@@ -206,7 +206,7 @@ styleTag.innerHTML = lightThemeCSS
 
 localStorage.setItem('mente-theme', 'light')
 setIsLight(true)
-```
+
 
 }
 
@@ -216,7 +216,7 @@ document.body.classList.remove('light-theme')
 document.documentElement.setAttribute('data-theme', 'dark')
 document.body.setAttribute('data-theme', 'dark')
 
-```
+
 const styleTag = document.getElementById('mente-light-theme-style')
 
 if (styleTag) {
@@ -225,20 +225,20 @@ if (styleTag) {
 
 localStorage.setItem('mente-theme', 'dark')
 setIsLight(false)
-```
+
 
 }
 
 useEffect(() => {
 const savedTheme = localStorage.getItem('mente-theme')
 
-```
+
 if (savedTheme === 'light') {
   enableLightTheme()
 } else {
   enableDarkTheme()
 }
-```
+
 
 }, [])
 
