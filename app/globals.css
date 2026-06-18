@@ -439,3 +439,13 @@ border-color: rgba(15, 23, 42, 0.16) !important;
 html[data-theme="light"] img {
 color: transparent;
 }
+/* Correção do fundo principal no modo claro */
+
+html.light-theme .site-shell,
+body.light-theme .site-shell,
+html[data-theme="light"] .site-shell,
+body[data-theme="light"] .site-shell {
+background: #ffffff !important;
+background-color: #ffffff !important;
+color: #0f172a !important;
+}
