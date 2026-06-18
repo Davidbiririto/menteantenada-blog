@@ -20,7 +20,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <main className="mx-auto max-w-7xl px-4 py-16">
+      <main className="mx-auto max-w-[1500px] px-4 py-16">
         <section className="mb-16">
           <h2 className="text-center font-display text-3xl font-extrabold md:text-4xl">Categorias principais</h2>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
@@ -29,7 +29,7 @@ export default async function HomePage() {
         </section>
         <section id="artigos">
           <h2 className="mb-8 text-center font-display text-3xl font-extrabold md:text-4xl">Artigos recentes</h2>
-          {posts?.length ? <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{posts.map(post => <PostCard key={post.id} post={post} />)}</div> : <p className="text-center text-slate-400">Nenhum artigo publicado ainda.</p>}
+          {posts?.length ? <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">{posts.map(post => <PostCard key={post.id} post={post} />)}</div> : <p className="text-center text-slate-400">Nenhum artigo publicado ainda.</p>}
         </section>
         <NewsletterForm />
       </main>
