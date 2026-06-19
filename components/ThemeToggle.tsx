@@ -11,7 +11,6 @@ document.body.classList.add('light-theme')
 document.documentElement.setAttribute('data-theme', 'light')
 document.body.setAttribute('data-theme', 'light')
 
-
 document.documentElement.style.backgroundColor = '#ffffff'
 document.body.style.backgroundColor = '#ffffff'
 document.body.style.color = '#0f172a'
@@ -122,7 +121,6 @@ if (newsletter) {
 localStorage.setItem('mente-theme', 'light')
 setIsLight(true)
 
-
 }
 
 function applyDarkTheme() {
@@ -130,7 +128,6 @@ document.documentElement.classList.remove('light-theme')
 document.body.classList.remove('light-theme')
 document.documentElement.setAttribute('data-theme', 'dark')
 document.body.setAttribute('data-theme', 'dark')
-
 
 document.documentElement.removeAttribute('style')
 document.body.removeAttribute('style')
@@ -147,12 +144,10 @@ styledElements.forEach((element) => {
 localStorage.setItem('mente-theme', 'dark')
 setIsLight(false)
 
-
 }
 
 useEffect(() => {
 const savedTheme = localStorage.getItem('mente-theme')
-
 
 if (savedTheme === 'light') {
   setTimeout(() => {
@@ -161,7 +156,6 @@ if (savedTheme === 'light') {
 } else {
   applyDarkTheme()
 }
-
 
 }, [])
 
@@ -177,10 +171,11 @@ return (
 <button
 type="button"
 onClick={toggleTheme}
-className="rounded-full border border-cyanx/30 bg-slate-900/70 px-3 py-2 text-xs font-bold text-cyanx transition hover:bg-cyanx/10 sm:text-sm"
+className="rounded-full border border-cyanx/30 bg-slate-900/70 px-3 py-2 text-xs font-bold text-cyanx transition hover/10 sm"
 aria-label="Alternar entre modo claro e modo escuro"
 title={isLight ? 'Ativar modo escuro' : 'Ativar modo claro'}
 >
-{isLight ? '🌙 Modo escuro' : '☀️ Modo claro'} </button>
+{isLight ? '🌙 Modo escuro' : '☀️ Modo claro'}
+
 )
 }
