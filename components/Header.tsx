@@ -22,9 +22,16 @@ return ( <header className="sticky top-0 z-50 border-b border-cyanx/10 bg-ink/90
        /> </Link>
 
 
-    <nav className="hidden items-center gap-5 text-sm text-slate-300 lg:flex">
+    <nav className="hidden items-center gap-5 text-sm font-semibold lg:flex">
       {nav.map(([label, href]) => (
-        <Link key={href} href={href} className="hover:text-cyanx">
+        <Link
+          key={href}
+          href={href}
+          className="text-slate-300 transition hover:text-cyanx"
+          style={{
+            textShadow: '0 0 1px rgba(15, 23, 42, 0.25)'
+          }}
+        >
           {label}
         </Link>
       ))}
