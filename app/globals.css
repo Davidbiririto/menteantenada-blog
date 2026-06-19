@@ -449,3 +449,134 @@ background: #ffffff !important;
 background-color: #ffffff !important;
 color: #0f172a !important;
 }
+/* Modo claro aplicado diretamente no container principal */
+
+.site-shell.force-light {
+background: #ffffff !important;
+background-color: #ffffff !important;
+color: #0f172a !important;
+}
+
+/* Header branco */
+.site-shell.force-light header {
+background: #ffffff !important;
+background-color: #ffffff !important;
+border-color: rgba(15, 23, 42, 0.10) !important;
+box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Fundo branco atrás das categorias, cards e conteúdo */
+.site-shell.force-light main,
+.site-shell.force-light main > section,
+.site-shell.force-light main section {
+background: #ffffff !important;
+background-color: #ffffff !important;
+background-image: none !important;
+color: #0f172a !important;
+}
+
+/* Hero continua escuro por causa do vídeo */
+.site-shell.force-light section:has(video) {
+background: #07111f !important;
+background-color: #07111f !important;
+}
+
+/* Títulos fora dos cards */
+.site-shell.force-light main section h1,
+.site-shell.force-light main section h2,
+.site-shell.force-light main section h3 {
+color: #0f172a !important;
+}
+
+/* Textos fora dos cards */
+.site-shell.force-light main section p,
+.site-shell.force-light main section li {
+color: #334155 !important;
+}
+
+/* Categorias principais */
+.site-shell.force-light main section a[href*="/categoria"] {
+background: #e0f2fe !important;
+color: #0369a1 !important;
+border-color: rgba(2, 132, 199, 0.22) !important;
+}
+
+/* Mantém os cards dos artigos escuros */
+.site-shell.force-light [class~="group"] {
+background: #0b1220 !important;
+background-color: #0b1220 !important;
+border-color: rgba(0, 217, 255, 0.12) !important;
+box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18) !important;
+}
+
+/* Textos dos cards continuam claros */
+.site-shell.force-light [class~="group"] h1,
+.site-shell.force-light [class~="group"] h2,
+.site-shell.force-light [class~="group"] h3 {
+color: #ffffff !important;
+}
+
+.site-shell.force-light [class~="group"] p,
+.site-shell.force-light [class~="group"] span,
+.site-shell.force-light [class~="group"] li {
+color: #cbd5e1 !important;
+}
+
+/* Página do artigo: fundo branco e texto escuro */
+.site-shell.force-light .article-content,
+.site-shell.force-light .prose {
+background: #ffffff !important;
+color: #334155 !important;
+}
+
+.site-shell.force-light .article-content h1,
+.site-shell.force-light .article-content h2,
+.site-shell.force-light .article-content h3,
+.site-shell.force-light .article-content strong,
+.site-shell.force-light .prose h1,
+.site-shell.force-light .prose h2,
+.site-shell.force-light .prose h3,
+.site-shell.force-light .prose strong {
+color: #0f172a !important;
+}
+
+.site-shell.force-light .article-content p,
+.site-shell.force-light .article-content li,
+.site-shell.force-light .prose p,
+.site-shell.force-light .prose li {
+color: #334155 !important;
+}
+
+.site-shell.force-light .article-content a,
+.site-shell.force-light .prose a {
+color: #0284c7 !important;
+}
+
+/* Newsletter pode continuar escura */
+.site-shell.force-light .glass {
+background: #0b1220 !important;
+background-color: #0b1220 !important;
+border-color: rgba(0, 217, 255, 0.16) !important;
+}
+
+/* Rodapé branco */
+.site-shell.force-light footer {
+background: #ffffff !important;
+background-color: #ffffff !important;
+color: #0f172a !important;
+border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+.site-shell.force-light footer h1,
+.site-shell.force-light footer h2,
+.site-shell.force-light footer h3,
+.site-shell.force-light footer strong {
+color: #0f172a !important;
+}
+
+.site-shell.force-light footer p,
+.site-shell.force-light footer li,
+.site-shell.force-light footer a,
+.site-shell.force-light footer span {
+color: #334155 !important;
+}
